@@ -15,10 +15,9 @@ class HomeViewModel {
    private var homeService = HomeService()
    var loadingRelay = BehaviorRelay<Bool>(value: true)
    var weatherLiveData = BehaviorRelay<WeatherModel?>(value: nil)
-    
-    var w1 = BehaviorRelay<Double?>(value: nil)
-    var w2 = BehaviorRelay<Double?>(value: nil)
-    private let disposeBag = DisposeBag()
+   var addressLiveData = BehaviorRelay<String>(value: "")
+
+   private let disposeBag = DisposeBag()
     
   
     
@@ -29,11 +28,8 @@ class HomeViewModel {
     
     func getCurrentLocationTemp(){
         loadingRelay.accept(true)
-        
-       
-            
         self.homeService.getLocationData().subscribe( onNext: ({[weak self] loc in
-            print(loc.lat)
+          
             self?.loadingRelay.accept(false)
             self?.homeService.getApiData(lat: loc.lat , lng: loc.lng) {
                  weatherData in
@@ -42,7 +38,12 @@ class HomeViewModel {
                  self?.weatherLiveData.accept(weatherData)
             }
             
+            self?.homeService.getAddress(lat: loc.lat, lng: loc.lng, completion: { addr in
+                print(addr)
+                self?.addressLiveData.accept(addr)
+            })
             
+         
         }))
         .disposed(by: disposeBag)
         

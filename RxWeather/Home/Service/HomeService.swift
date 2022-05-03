@@ -14,17 +14,31 @@ class HomeService {
     ///private final var locationRepo = LocationRepo()
     private final var weatherRepo =  WeatherRepo()
     private let disposeBag = DisposeBag()
-    
+    var addressRelay = BehaviorRelay<String>(value: "")
     var weatherRelay = BehaviorRelay<WeatherModel?>(value: nil)
+    
+    
+    
+    func getAddress(lat:Double, lng:Double,completion: @escaping ((String) -> ())) {
+        
+        AddressService.shared.convertLatLongToAddress(lat: lat, lng: lng) { loc in
+            print(loc)
+            self.addressRelay.accept(loc)
+        }
+    }
     
     func getLocationData() -> Observable<LocationModel>{
         
         
         return LocationService.shared.locationRelay.map { loc in
      
+
             return LocationModel(lat: loc.latitude, lng: loc.longitude)
         }
     }
+    
+    
+    
     
     
     func getApiData(lat:Double, lng:Double,completion: @escaping ((WeatherModel) -> ())){

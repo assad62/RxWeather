@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1A3590281FFB5000C6190C /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A358F281FFB5000C6190C /* AddressService.swift */; };
 		2BB53FC1281E32FC000ECDDF /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53FBE281E32FC000ECDDF /* ApiRequest.swift */; };
 		2BB53FC2281E32FC000ECDDF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53FBF281E32FC000ECDDF /* Endpoint.swift */; };
 		2BB53FC3281E32FC000ECDDF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53FC0281E32FC000ECDDF /* NetworkError.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B1A358F281FFB5000C6190C /* AddressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
 		2BB53FBE281E32FC000ECDDF /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		2BB53FBF281E32FC000ECDDF /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		2BB53FC0281E32FC000ECDDF /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B1A358E281FFB3000C6190C /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				2B1A358F281FFB5000C6190C /* AddressService.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
 		2BB53FBD281E32DF000ECDDF /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 		2BB53FC8281E35EF000ECDDF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				2B1A358E281FFB3000C6190C /* Address */,
 				2BB53FD7281E9AC7000ECDDF /* Location */,
 				2BB53FC9281E3680000ECDDF /* Weather */,
 			);
@@ -290,6 +301,7 @@
 				2BB53FC7281E35CF000ECDDF /* HomeViewModel.swift in Sources */,
 				338ECC2A280EE0E100BABB56 /* AppDelegate.swift in Sources */,
 				2BB53FD6281E6552000ECDDF /* HomeService.swift in Sources */,
+				2B1A3590281FFB5000C6190C /* AddressService.swift in Sources */,
 				2BB53FCB281E3699000ECDDF /* WeatherModel.swift in Sources */,
 				2BB53FC2281E32FC000ECDDF /* Endpoint.swift in Sources */,
 				2BB53FD9281E9D1B000ECDDF /* LocationService.swift in Sources */,

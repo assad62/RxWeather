@@ -12,5 +12,6 @@ struct WeatherModel{
      var tempLabel:Double?
      var tempDesc: String?
      var tempImage:UIImage?
+     var address:String?
 }
 

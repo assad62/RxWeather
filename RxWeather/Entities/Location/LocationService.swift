@@ -10,6 +10,10 @@ import CoreLocation
 import RxSwift
 import RxRelay
 
+
+
+
+
 class LocationService:NSObject,CLLocationManagerDelegate {
    
     static let shared = LocationService()

@@ -26,6 +26,18 @@ struct HomeViewComponents{
        tempDetailLabel.textColor = .black
        return tempDetailLabel
    }()
+    
+    var addressLabel: UILabel = {
+       let label = UILabel()
+       label.textAlignment = .center
+       label.translatesAutoresizingMaskIntoConstraints = false
+       label.font =  UIFont(name:"Avenir Next Demi",size:18)
+       label.textColor = .black
+       label.numberOfLines = 0
+       label.lineBreakMode = NSLineBreakMode.byWordWrapping
+       label.sizeToFit()
+       return label
+   }()
    
    
     var mainImage: UIImageView = {
@@ -57,9 +69,9 @@ struct HomeViewComponents{
 
 
 extension HomeViewComponents {
-    var destructured: (UILabel, UILabel, UIImageView, UIActivityIndicatorView) {
+    var destructured: (UILabel, UILabel, UILabel, UIImageView, UIActivityIndicatorView) {
         
         
-        return (self.tempLabel, self.tempDetailLabel, self.mainImage, self.loadingView)
+        return (self.tempLabel, self.tempDetailLabel, self.addressLabel, self.mainImage, self.loadingView)
     }
 }

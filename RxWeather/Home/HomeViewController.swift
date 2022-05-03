@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     
     var tempLabel = UILabel()
     var tempDetailLabel = UILabel()
+    var addressLabel = UILabel()
     var mainImage = UIImageView()
     var loadingView = UIActivityIndicatorView()
 
@@ -72,10 +73,11 @@ class HomeViewController: UIViewController {
     func setupViews(){
         
         let s = HomeViewComponents()
-        let (_tempLabel, _tempDetailLabel, _mainImage, _loadingView) = s.destructured
+        let (_tempLabel, _tempDetailLabel, _addressLabel, _mainImage, _loadingView) = s.destructured
         
         tempLabel = _tempLabel
         tempDetailLabel = _tempDetailLabel
+        addressLabel = _addressLabel
         mainImage = _mainImage
         loadingView = _loadingView
         
@@ -89,6 +91,11 @@ class HomeViewController: UIViewController {
         stackView.addArrangedSubview(mainImage)
         stackView.addArrangedSubview(tempLabel)
         stackView.addArrangedSubview(tempDetailLabel)
+        //stackView.addArrangedSubview(addressLabel)
+        
+       
+        view.addSubview(addressLabel)
+       
         
         
         view.addSubview(loadingView)
@@ -101,7 +108,11 @@ class HomeViewController: UIViewController {
             loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             loadingView.heightAnchor.constraint(equalTo: view.heightAnchor),
-            loadingView.widthAnchor.constraint(equalTo: view.widthAnchor)
+            loadingView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            addressLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            addressLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 8),
+            addressLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 15),
+            
         ])
         
         
@@ -133,6 +144,13 @@ class HomeViewController: UIViewController {
             else{
                 self?.loadingView.stopAnimating()
             }
+           
+        }).disposed(by: disposeBag)
+        
+        
+        viewModel.addressLiveData.subscribe(onNext: { [weak self] address in
+            
+            self?.addressLabel.text = address
            
         }).disposed(by: disposeBag)
         
