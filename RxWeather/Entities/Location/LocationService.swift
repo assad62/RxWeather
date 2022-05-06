@@ -58,45 +58,4 @@ class LocationService:NSObject,CLLocationManagerDelegate {
 
     
     
-    
-//    func locationObservable()->Observable<CLLocationCoordinate2D> {
-//
-//        currentLocation = locationManager.location
-//
-//        return Observable<CLLocationCoordinate2D>.create {
-//            observer -> Disposable in
-//
-//
-//            switch (self.locationManager.authorizationStatus){
-//
-//
-//             case .authorizedAlways, .authorizedWhenInUse:
-//                  self.currentLocation = self.locationManager.location
-//                  observer.onNext(self.currentLocation.coordinate)
-//                  observer.onCompleted()
-//
-//                  return Disposables.create()
-//
-//           case .notDetermined, .denied , .restricted:
-//                observer.onError(RxError.timeout)
-//                return Disposables.create()
-//
-//            @unknown default:
-//                observer.onCompleted()
-//                return Disposables.create()
-//            }
-//
-//
-//
-//
-//
-//
-//        }
-//
-//
-//
-//    }
-    
-    
-    
 }

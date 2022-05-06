@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B1A3590281FFB5000C6190C /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A358F281FFB5000C6190C /* AddressService.swift */; };
+		2B8B25462822B153009B74D2 /* AddLocationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B25452822B153009B74D2 /* AddLocationAlert.swift */; };
 		2BB53FC1281E32FC000ECDDF /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53FBE281E32FC000ECDDF /* ApiRequest.swift */; };
 		2BB53FC2281E32FC000ECDDF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53FBF281E32FC000ECDDF /* Endpoint.swift */; };
 		2BB53FC3281E32FC000ECDDF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53FC0281E32FC000ECDDF /* NetworkError.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		2B1A358F281FFB5000C6190C /* AddressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
+		2B8B25452822B153009B74D2 /* AddLocationAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationAlert.swift; sourceTree = "<group>"; };
 		2BB53FBE281E32FC000ECDDF /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		2BB53FBF281E32FC000ECDDF /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		2BB53FC0281E32FC000ECDDF /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -70,6 +72,22 @@
 				2B1A358F281FFB5000C6190C /* AddressService.swift */,
 			);
 			path = Address;
+			sourceTree = "<group>";
+		};
+		2B8B25432822B105009B74D2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2B8B25442822B12F009B74D2 /* AddLocAlert */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2B8B25442822B12F009B74D2 /* AddLocAlert */ = {
+			isa = PBXGroup;
+			children = (
+				2B8B25452822B153009B74D2 /* AddLocationAlert.swift */,
+			);
+			path = AddLocAlert;
 			sourceTree = "<group>";
 		};
 		2BB53FBD281E32DF000ECDDF /* Api */ = {
@@ -152,6 +170,7 @@
 		338ECC28280EE0E100BABB56 /* RxWeather */ = {
 			isa = PBXGroup;
 			children = (
+				2B8B25432822B105009B74D2 /* Components */,
 				2BB53FC8281E35EF000ECDDF /* Entities */,
 				2BB53FC5281E35AB000ECDDF /* Home */,
 				2BB53FBD281E32DF000ECDDF /* Api */,
@@ -305,6 +324,7 @@
 				2BB53FCB281E3699000ECDDF /* WeatherModel.swift in Sources */,
 				2BB53FC2281E32FC000ECDDF /* Endpoint.swift in Sources */,
 				2BB53FD9281E9D1B000ECDDF /* LocationService.swift in Sources */,
+				2B8B25462822B153009B74D2 /* AddLocationAlert.swift in Sources */,
 				2BB53FD3281E5F71000ECDDF /* HomeViewComponents.swift in Sources */,
 				2BB53FC1281E32FC000ECDDF /* ApiRequest.swift in Sources */,
 				2BB53FDB281ECE6A000ECDDF /* LocationModel.swift in Sources */,

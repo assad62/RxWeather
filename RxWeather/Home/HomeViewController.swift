@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .systemBackground
         
-       
+        self.navigationItem.title = "Rx Weather";
         navigationController?.navigationBar.standardAppearance = appearance;
         navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
     }
@@ -63,8 +63,14 @@ class HomeViewController: UIViewController {
         viewModel.getCurrentLocationTemp()
     }
     
+    
     @objc func addTapped(){
+        let vc = AddLocationAlert()
+      
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
         
+        self.present(vc, animated: true, completion: nil)
     }
     
     

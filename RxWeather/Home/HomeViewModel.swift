@@ -28,24 +28,33 @@ class HomeViewModel {
     
     func getCurrentLocationTemp(){
         loadingRelay.accept(true)
+       
         self.homeService.getLocationData().subscribe( onNext: ({[weak self] loc in
           
             self?.loadingRelay.accept(false)
+            
             self?.homeService.getApiData(lat: loc.lat , lng: loc.lng) {
                  weatherData in
                  
-                 
                  self?.weatherLiveData.accept(weatherData)
+        
             }
             
-            self?.homeService.getAddress(lat: loc.lat, lng: loc.lng, completion: { addr in
-                print(addr)
-                self?.addressLiveData.accept(addr)
+        
+            self?.homeService.getAddress(lat: loc.lat, lng: loc.lng, completion: { adr in
+                
+                 self?.addressLiveData.accept(adr)
             })
             
+            
+            
          
-        }))
-        .disposed(by: disposeBag)
+        })).disposed(by: disposeBag)
+        
+        
+    
+        
+      
         
         
     }

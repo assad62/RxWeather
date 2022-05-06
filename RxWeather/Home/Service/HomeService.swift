@@ -22,8 +22,7 @@ class HomeService {
     func getAddress(lat:Double, lng:Double,completion: @escaping ((String) -> ())) {
         
         AddressService.shared.convertLatLongToAddress(lat: lat, lng: lng) { loc in
-            print(loc)
-            self.addressRelay.accept(loc)
+               completion(loc)
         }
     }
     
@@ -32,7 +31,6 @@ class HomeService {
         
         return LocationService.shared.locationRelay.map { loc in
      
-
             return LocationModel(lat: loc.latitude, lng: loc.longitude)
         }
     }
@@ -45,8 +43,7 @@ class HomeService {
        
       
         weatherRepo.getLiveWeatherData(lat:lat, lng: lng).subscribe { weatherData  in
-
-            completion(weatherData)
+               completion(weatherData)
         } onError: {  error in
 
             guard error is NetworkError else { return }
