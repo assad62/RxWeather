@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B1A3590281FFB5000C6190C /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A358F281FFB5000C6190C /* AddressService.swift */; };
+		2B7DA6FC2825876500395699 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7DA6FB2825876500395699 /* Colors.swift */; };
 		2B8B25462822B153009B74D2 /* AddLocationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B25452822B153009B74D2 /* AddLocationAlert.swift */; };
 		2BB53FC1281E32FC000ECDDF /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53FBE281E32FC000ECDDF /* ApiRequest.swift */; };
 		2BB53FC2281E32FC000ECDDF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB53FBF281E32FC000ECDDF /* Endpoint.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		2B1A358F281FFB5000C6190C /* AddressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
+		2B7DA6FB2825876500395699 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2B8B25452822B153009B74D2 /* AddLocationAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationAlert.swift; sourceTree = "<group>"; };
 		2BB53FBE281E32FC000ECDDF /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		2BB53FBF281E32FC000ECDDF /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 				2B1A358F281FFB5000C6190C /* AddressService.swift */,
 			);
 			path = Address;
+			sourceTree = "<group>";
+		};
+		2B7DA6FA282584D600395699 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2B7DA6FB2825876500395699 /* Colors.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		2B8B25432822B105009B74D2 /* Components */ = {
@@ -170,6 +180,7 @@
 		338ECC28280EE0E100BABB56 /* RxWeather */ = {
 			isa = PBXGroup;
 			children = (
+				2B7DA6FA282584D600395699 /* Utility */,
 				2B8B25432822B105009B74D2 /* Components */,
 				2BB53FC8281E35EF000ECDDF /* Entities */,
 				2BB53FC5281E35AB000ECDDF /* Home */,
@@ -329,6 +340,7 @@
 				2BB53FC1281E32FC000ECDDF /* ApiRequest.swift in Sources */,
 				2BB53FDB281ECE6A000ECDDF /* LocationModel.swift in Sources */,
 				2BB53FC3281E32FC000ECDDF /* NetworkError.swift in Sources */,
+				2B7DA6FC2825876500395699 /* Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

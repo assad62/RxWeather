@@ -9,7 +9,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+
+
 class HomeViewController: UIViewController {
+    
+    
+    
     
     var tempLabel = UILabel()
     var tempDetailLabel = UILabel()
@@ -37,7 +42,9 @@ class HomeViewController: UIViewController {
             target: self,
             action: #selector(addTapped))
         
+        add.tintColor = Colors().defaultColor
         navigationItem.rightBarButtonItems = [add]
+        
         
         let location = UIBarButtonItem(
             image: UIImage( systemName: "location"),
@@ -46,15 +53,21 @@ class HomeViewController: UIViewController {
             action: #selector(locationTapped)
         )
         
+        location.tintColor = Colors().defaultColor
         navigationItem.leftBarButtonItems = [location]
         
        
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .systemBackground
+       let attr = [NSAttributedString.Key.font: UIFont(name: "Bradley Hand Bold", size: 26)!]
+        appearance.titleTextAttributes = attr
         
         self.navigationItem.title = "Rx Weather";
+        
         navigationController?.navigationBar.standardAppearance = appearance;
+        
+        
         navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
     }
     

@@ -23,7 +23,7 @@ struct HomeViewComponents{
        tempDetailLabel.textAlignment = .center
        tempDetailLabel.translatesAutoresizingMaskIntoConstraints = false
        tempDetailLabel.font =  UIFont(name:"Avenir Next Demi Bold",size:26)
-       tempDetailLabel.textColor = .black
+       tempDetailLabel.textColor = Colors().defaultColor
        return tempDetailLabel
    }()
     
@@ -32,7 +32,7 @@ struct HomeViewComponents{
        label.textAlignment = .center
        label.translatesAutoresizingMaskIntoConstraints = false
        label.font =  UIFont(name:"Avenir Next Demi",size:18)
-       label.textColor = .black
+       label.textColor = Colors().defaultColor
        label.numberOfLines = 0
        label.lineBreakMode = NSLineBreakMode.byWordWrapping
        label.sizeToFit()
